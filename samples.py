@@ -13,6 +13,10 @@ limitations under the License.
 
 import pyquik as pq
 
+
+quik = pq.Quik(input_file="shared-files/input.tri",
+               output_file="shared-files/output.tro")
+
 order = pq.Order(
     action='NEW_ORDER',
     account="NL0011100043",
@@ -23,10 +27,6 @@ order = pq.Order(
     operation='S',
     price=0,
     clientcode="client_code")
-
-quik = pq.Quik(input_file="shared-files/input.tri",
-               output_file="shared-files/output.tro")
-
 
 order_id = quik.register(order)
 
